@@ -1,10 +1,21 @@
 <template>
-  <div id="nav">
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
-  </div>
+  </div> -->
   <router-view/>
 </template>
+
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+import { ref } from 'vue';
+export default class Home extends Vue {
+    setup() {
+       const active = ref(0);
+      return { active };
+    }
+}
+</script>
 
 <style lang="scss">
 #app {
